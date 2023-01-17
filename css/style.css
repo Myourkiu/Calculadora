@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body{
+    background-color: #666;
+}
+
+#interface-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#interface-container #interface{
+    width: 400px;
+    border-radius: 7px;
+    padding: 0.5em;
+    background-color: #c4c4c4;
+    display: flex;
+    flex-direction: column;
+}
+
+#interface-container #interface h3{
+    font-size: .8em;
+    font-weight: 300;
+    color: #777;
+}
+
+#interface-container #interface #operations{
+    text-align: right;
+}
+
+#operations #previous-operation, #current-operation{
+    overflow-wrap: break-word; /* serve para quebrar a linha, caso passe da width pré estabelecida */
+    min-height: 1.6em;
+
+}
+
+#operations #previous-operation {
+    color: #888;
+    padding: .2em;
+}
+
+#operations #current-operation{
+    font-size: 2.5em;
+    font-weight: 700;
+    padding: .2em;
+}
+
+#buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+}
+
+#buttons-container button{
+    border: 1px solid transparent;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+#buttons-container button.number{
+    background-color: #f3f3f3;
+}
+
+#buttons-container button.number:hover{
+    background-color: #bababa;
+    border-color: #999;
+}
